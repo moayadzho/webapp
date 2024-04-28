@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Page</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<style>
+		/* Add your custom CSS styles here */
+	</style>
+</head>
+<body>
+<div class="container">
+	<h1 class="text-center">User Page</h1>
+
+	<!-- Display existing appointments -->
+	<h2>Existing Appointments:</h2>
+	<ul>
+		<!-- Loop through appointments and display each one -->
+		<li>Appointment 1</li>
+		<li>Appointment 2</li>
+		<!-- Add more items dynamically using Thymeleaf -->
+	</ul>
+
+	<!-- Add new appointment form -->
+	<h2>Add New Appointment:</h2>
+	<form action="/appointments/add" method="post">
+		<div class="form-group">
+			<label for="appointmentDate">Date:</label>
+			<input type="date" id="appointmentDate" name="appointmentDate" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label for="appointmentTime">Time:</label>
+			<input type="time" id="appointmentTime" name="appointmentTime" class="form-control" required>
+		</div>
+		<button type="submit" class="btn btn-primary">Add Appointment</button>
+	</form>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
